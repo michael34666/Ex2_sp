@@ -25,8 +25,8 @@ int main()
   case 'B':
   {
     scanf("%d%d",&i,&j);
-    bool ans= havePath(mymat0,10,i,j);
-    printf(" %s\n", ans);
+    //char ans= havePath(mymat0,10,i,j);
+    printf(" %s\n", havePath(mymat0,10,i,j)? "True":"False");
 
     break; 
   }
@@ -43,6 +43,13 @@ default:
 
  }
 
+ while(choose != 'D');
+
+    
+    for (int i = 0; i < 10; ++i)
+        free(mymat0[i][i]);
+
+    free(mymat0);
 
  return 0;
 }
