@@ -20,16 +20,16 @@ int initialize(int** mat,int length)
  
  void FWA(int** mat,int length)
 { 
-   int  copymat [10][10] ;
+  // int  copymat [10][10] ;
 
-   for(int i=0;i<10;i++)
-   {
-      for(int j=0;j<10;j++)
-      {
-         copymat[i][j]=mat[i][j];
+  // for(int i=0;i<10;i++)
+ //  {
+  //    for(int j=0;j<10;j++)
+   //   {
+    //     copymat[i][j]=mat[i][j];
 
-      }
-   }
+     // }
+  // }
 
    for(int k=0;k<10;k++)
    {
@@ -37,9 +37,9 @@ int initialize(int** mat,int length)
       {
          for (int j= 0; j <10; j++)
          {
-            if(copymat[i][k]+copymat[k][j]<copymat[i][j])
+            if(mat[i][k]+mat[k][j]<mat[i][j])
             {
-             copymat[i][j]=copymat[i][k]+copymat[k][j];
+             mat[i][j]=mat[i][k]+mat[k][j];
             }
          }
          
