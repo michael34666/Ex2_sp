@@ -3,6 +3,7 @@
 #include <math.h>
 
 
+
  
 int initialize(int** mat,int length)
  {
@@ -17,7 +18,7 @@ int initialize(int** mat,int length)
     return 0;
  }
  
- void FWA(int** mat,int length)
+ int FWA(int** mat,int length, int i, int j)
 { 
    int  copymat [10][10] ;
 
@@ -44,15 +45,15 @@ int initialize(int** mat,int length)
          
       }
    }
+   return copymat[i][j];
    
 }
  
  
- 
  int havePath(int** mat,int length,int i,int j)
  {
-    FWA(mat,length);
-    if(mat[i][j]!=0&&mat[i][j]<INFINITY)
+   int num= FWA(mat,length,i,j);
+    if(num!=0&&num<INFINITY)
     {
       return 1;
     }
@@ -62,14 +63,24 @@ int initialize(int** mat,int length)
 
  int shortestPath(int** mat,int length,int i,int j)
  {
-    FWA(mat,length);
-    if(mat[i][j] &&mat[i][j]!=INFINITY)
+    int num=FWA(mat,length,i,j);
+    if(num &&num!=INFINITY)
     {
-      return mat[i][j];
+      return num;
     }
 
     return -1;
  }
+
+
+ 
+
+
+
+  
+
+ 
+
 
 
  
