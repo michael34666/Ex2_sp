@@ -44,10 +44,7 @@ case 'D':
   
 
  }
-for (int i = 0; i < length; i++) {
-        free(mymat0[i]);
-    }
-    free(mymat0);
+
 
 
  return 0;
