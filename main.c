@@ -13,8 +13,10 @@ int main()
  int i=0;
  int j=0;
  
- 
+ do{
+
  scanf("%c",&choose);
+
  switch (choose)
  {
   case 'A':
@@ -37,15 +39,16 @@ int main()
     printf(" %d\n", value);
     break; 
   }
-case 'D':
- {
-    break; 
- }
+ default:
+    break;
   
 
  }
 
+ }
 
+ while(choose != 'D');
+ 
 
- return 0;
+return 0;
 }
