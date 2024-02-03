@@ -20,7 +20,7 @@ int initialize(int** mat,int length)
  
  int** FWA(int** mat,int length)
 { 
-   int  copymat [10][10] ;
+   int  ** copymat=NULL ;
 
    for(int i=0;i<10;i++)
    {
@@ -72,6 +72,14 @@ int initialize(int** mat,int length)
 
     return -1;
  }
+
+
+
+
+
+
+
+
 
 
 
