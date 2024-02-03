@@ -9,6 +9,7 @@ int main()
  {
     mymat0[i]=(int *)malloc(10*sizeof(int));
  }
+
  char choose;
  int i=0;
  int j=0;
@@ -28,7 +29,7 @@ int main()
   {
     scanf("%d%d",&i,&j);
     //char ans= havePath(mymat0,10,i,j);
-    printf(" %s\n", havePath(mymat0,10,i,j)? "True":"False");
+    printf("%s\n", havePath(mymat0,10,i,j)? "True":"False");
 
     break; 
   }
@@ -36,7 +37,7 @@ int main()
   {
     scanf("%d%d",&i,&j);
     int value=shortestPath(mymat0,10,i,j);
-    printf(" %d\n", value);
+    printf("%d\n", value);
     break; 
   }
  default:
@@ -48,7 +49,7 @@ int main()
  }
 
  while(choose != 'D');
-
+ 
    for (int i = 0; i < 10; ++i)
         free(mymat0[i]);
 
