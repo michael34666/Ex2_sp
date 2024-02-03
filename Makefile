@@ -1,8 +1,8 @@
 
-all:linkall
+all:connections
 
-linkall:main.o libmat.a
-	gcc -o linkall main.o libmat.a
+connections:main.o libmat.a
+	gcc -o connections main.o libmat.a
 
 main.o:main.c my_mat.h
 	gcc -Wall -g -c main.c -o main.o
@@ -15,7 +15,7 @@ my_mat.o:my_mat.c my_mat.h
 
 
 clean:
-	rm -f *.o *.a linkall
+	rm -f *.o *.a connections
 
 
 .PHONY:all clean
