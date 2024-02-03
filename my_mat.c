@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
-#include "my_mat.h"
+
 
  
 int initialize(int** mat,int length)
