@@ -37,14 +37,7 @@ int initialize(int** mat,int length)
       {
          for (int j= 0; j <10; j++)
          {
-            if(copymat[i][k]==0)
-            {
-               continue;
-            }
-            if(copymat[i][k]==0)
-            {
-               continue;
-            }
+           
 
             if(copymat[i][k]+copymat[k][j]<copymat[i][j])
             {
