@@ -73,7 +73,7 @@ int initialize(int** mat,int length)
  int shortestPath(int** mat,int length,int i,int j)
  {
     FWA(mat,length);
-    if(mat[i][j] &&mat[i][j]!=INFINITY)
+    if(mat[i][j]!=0 &&mat[i][j]!=INFINITY)
     {
       return mat[i][j];
     }
