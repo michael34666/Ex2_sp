@@ -39,7 +39,7 @@ int initialize(int** mat,int length)
          {
            
 
-            if(copymat[i][k]+copymat[k][j]<copymat[i][j])
+            if(copymat[i][k]+copymat[k][j]<copymat[i][j]&&copymat[i][k]!=0&&copymat[k][j]!=0)
             {
              copymat[i][j]=copymat[i][k]+copymat[k][j];
             }
