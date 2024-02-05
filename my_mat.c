@@ -56,18 +56,18 @@ int initialize(int** mat,int length)
  int havePath(int** mat,int length,int i,int j)
  {
     FWA(mat,length);
-    if(mat[i][j]!=0)
+    if(mat[i][j])
     {
-      return 1;
+      return true;
     }
 
-    return 0;
+    return (mat[i][j]!=0);
  }
 
  int shortestPath(int** mat,int length,int i,int j)
  {
    //FWA(mat,length);
-    if(havePath(mat,10,i,j))
+    if(mat[i][j]!=0)
     {
       return mat[i][j];
     }
