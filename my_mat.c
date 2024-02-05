@@ -22,14 +22,14 @@ int initialize(int** mat,int length)
 { 
    int  copymat [length][length] ;
 
-   for(int i=0;i<length;i++)
-   {
-      for(int j=0;j<length;j++)
-      {
-         copymat[i][j]=mat[i][j];
+   //for(int i=0;i<length;i++)
+   //{
+   //   for(int j=0;j<length;j++)
+    //  {
+     //    copymat[i][j]=mat[i][j];
 
-      }
-   }
+    //  }
+  // }
   for(int k=0;k<10;k++)
    {
       for(int i=0;i<10;i++)
@@ -38,9 +38,9 @@ int initialize(int** mat,int length)
          {
            
 
-            if(copymat[i][k]+copymat[k][j]<copymat[i][j])
+            if(mat[i][k]+mat[k][j]<mat[i][j])
             {
-             copymat[i][j]=copymat[i][k]+copymat[k][j];
+             mat[i][j]=mat[i][k]+mat[k][j];
             }
          }
          
