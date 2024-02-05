@@ -37,7 +37,7 @@ int main()
   {
     scanf("%d%d",&i,&j);
     //char ans= havePath(mymat0,10,i,j);
-    printf("%s\n", havePath(mymat0,10,i,j)? "True":"False");
+    printf("%d\n", havePath(mymat0,10,i,j));
 
     break; 
   }
@@ -65,4 +65,3 @@ int main()
 
 return 0;
 }
-
