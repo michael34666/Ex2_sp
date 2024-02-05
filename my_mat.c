@@ -20,7 +20,7 @@ int initialize(int** mat,int length)
  
  void FWA(int** mat,int length)
 { 
-   int  copymat [length][length] ;
+ //  int  copymat [length][length] ;
 
    //for(int i=0;i<length;i++)
    //{
