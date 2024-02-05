@@ -20,7 +20,7 @@ int initialize(int** mat,int length)
  
  void FWA(int** mat,int length)
 { 
- //  int  copymat [length][length] ;
+   //int  copymat [length][length] ;
 
    //for(int i=0;i<length;i++)
    //{
@@ -36,11 +36,12 @@ int initialize(int** mat,int length)
       {
          for (int j= 0; j <10; j++)
          {
-           
-
-            if(mat[i][k]+mat[k][j]<mat[i][j]&&mat[i][k]!=0&&mat[k][j]!=0&&mat[i][j]!=0)
+            if(mat[i][k]!=0||mat[k][j]!=0||mat[i][j]!=0)
             {
-             mat[i][j]=mat[i][k]+mat[k][j];
+             if(mat[i][k]+mat[k][j]<mat[i][j]&&mat[i][k]!=0&&mat[k][j]!=0&&mat[i][j]!=0)
+             {
+              mat[i][j]=mat[i][k]+mat[k][j];
+             }
             }
          }
          
@@ -65,7 +66,7 @@ int initialize(int** mat,int length)
 
  int shortestPath(int** mat,int length,int i,int j)
  {
-    FWA(mat,length);
+   // FWA(mat,length);
     if(mat[i][j]!=0)
     {
       return mat[i][j];
@@ -73,5 +74,4 @@ int initialize(int** mat,int length)
 
     return -1;
  }
-
 
