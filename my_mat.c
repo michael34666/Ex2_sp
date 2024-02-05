@@ -38,7 +38,7 @@ int initialize(int** mat,int length)
          {
            
 
-            if(mat[i][k]+mat[k][j]<mat[i][j]&&mat[i][k]!=0&&mat[k][j]!=0)
+            if(mat[i][k]+mat[k][j]<mat[i][j]&&mat[i][k]!=0&&mat[k][j]!=0&&mat[i][j]!=0)
             {
              mat[i][j]=mat[i][k]+mat[k][j];
             }
