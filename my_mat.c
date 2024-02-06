@@ -4,7 +4,7 @@
 
 
 
-int fwarun=0;
+static int fwarun=0;
  
 void initialize(int** mat,int length)
  {
