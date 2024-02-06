@@ -4,7 +4,7 @@
 
 
 
-static int fwarun=0;
+//int fwarun=0;
  
 void initialize(int** mat,int length)
  {
@@ -50,17 +50,16 @@ void initialize(int** mat,int length)
       }
    }
    
-   fwarun=1;
+   //fwarun=1;
 
 }
  
  
  int havePath(int** mat,int length,int i,int j)
  {
-   if(fwarun!=1)
-   {
+   
     FWA(mat,length);
-   }
+   
     if(i==j)
     {
       return 0;
@@ -74,10 +73,9 @@ void initialize(int** mat,int length)
 
  int shortestPath(int** mat,int length,int i,int j)
  {
-  if(fwarun!=1)
-   {
+  
     FWA(mat,length);
-   }
+   
     if(mat[i][j])
     {
       return mat[i][j];
