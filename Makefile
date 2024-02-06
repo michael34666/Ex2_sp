@@ -10,7 +10,7 @@ my_graph.o:my_graph.c my_mat.h
 libmat.a:my_mat.o
 	ar -rcs libmat.a my_mat.o
 
-my_mat.o:my_mat.c my_mat.h
+my_mat.o:my_mat.c 
 	gcc -Wall -g -c my_mat.c -o my_mat.o
 
 
