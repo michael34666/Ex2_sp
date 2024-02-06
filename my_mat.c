@@ -15,7 +15,7 @@ int initialize(int** mat,int length)
     
      }
     }
-    return 0;
+    
  }
  
  void FWA(int** mat,int length)
