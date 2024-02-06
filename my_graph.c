@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include "my_mat.h"
 
-int main()
+int my_graph()
 {
-  char choose;
+ char choose;
  int i=0;
  int j=0;
  int **mymat0=(int**)malloc(10*sizeof(int*));
@@ -12,6 +12,7 @@ int main()
  {
     mymat0[i]=(int *)malloc(10*sizeof(int));
  }
+
  for(int i=0;i<10;i++)
     {
      for(int j=0;j<10;j++)
@@ -38,7 +39,6 @@ int main()
     scanf("%d%d",&i,&j);
     //char ans= havePath(mymat0,10,i,j);
     printf("%s\n", havePath(mymat0,10,i,j)? "True":"False");
-
     break; 
   }
   case 'C':
@@ -56,7 +56,7 @@ int main()
 
  }
 
- while(choose != 'D');
+ while(choose != 'D'||choose != EOF);
  
    for (int i = 0; i < 10; ++i)
         free(mymat0[i]);
