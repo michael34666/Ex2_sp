@@ -56,7 +56,7 @@ int main()
 
  }
 
- while(choose != 'D');
+ while(choose != 'D'&&choose != EOF);
  
    for (int i = 0; i < 10; ++i)
         free(mymat0[i]);
