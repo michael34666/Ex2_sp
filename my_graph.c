@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "my_mat.h"
 
-int my_graph()
+int main()
 {
  char choose;
  int i=0;
