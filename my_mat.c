@@ -39,11 +39,12 @@ void initialize(int** mat,int length)
       {
          for (int j= 0; j <10; j++)
          {
-            
+            if(i!=j){
              if((mat[i][k]!=0 && mat[k][j]!=0 && mat[i][k]+mat[k][j]<mat[i][j])|| mat[i][j]==0)
              {
               mat[i][j]=mat[i][k]+mat[k][j];
              }
+            }
             
          }
          
