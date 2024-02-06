@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
+#define infinite  2147483647
 
 
 
@@ -30,19 +31,31 @@ int initialize(int** mat,int length)
 
     //  }
   // }
+for(int i=0;i<10;i++)
+      {
+         for (int j= 0; j <10; j++)
+         {
+            if(i!=j&& mat[i][j]==0)
+            {
+               mat[i][j]=infinite;
+            }
+
+         }
+      }
+
+
   for(int k=0;k<10;k++)
    {
       for(int i=0;i<10;i++)
       {
          for (int j= 0; j <10; j++)
          {
-            if(mat[i][k]!=0&&mat[k][j]!=0&&mat[i][j]!=0)
-            {
+            
              if(mat[i][k]+mat[k][j]<mat[i][j])
              {
               mat[i][j]=mat[i][k]+mat[k][j];
              }
-            }
+            
          }
          
       }
@@ -56,7 +69,7 @@ int initialize(int** mat,int length)
  int havePath(int** mat,int length,int i,int j)
  {
     FWA(mat,length);
-      if (mat[i][j] != 0)
+      if (mat[i][j] != 0&&mat[i][j]<infinite)
     {
         return 1;
     }
@@ -66,7 +79,7 @@ int initialize(int** mat,int length)
  int shortestPath(int** mat,int length,int i,int j)
  {
    FWA(mat,length);
-    if(mat[i][j]!=0)
+    if(mat[i][j]!=0&&mat[i][j]<infinite)
     {
       return mat[i][j];
     }
