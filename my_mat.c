@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
-#define infinite  2147483647
+
 
 
 
  
-int initialize(int** mat,int length)
+void initialize(int** mat,int length)
  {
     for(int i=0;i<length;i++)
     {
@@ -16,7 +16,7 @@ int initialize(int** mat,int length)
     
      }
     }
-    return 0;
+  
  }
  
  void FWA(int** mat,int length)
@@ -31,17 +31,6 @@ int initialize(int** mat,int length)
 
     //  }
   // }
-for(int i=0;i<10;i++)
-      {
-         for (int j= 0; j <10; j++)
-         {
-            if(i!=j&& mat[i][j]==0)
-            {
-               mat[i][j]=infinite;
-            }
-
-         }
-      }
 
 
   for(int k=0;k<10;k++)
@@ -51,7 +40,7 @@ for(int i=0;i<10;i++)
          for (int j= 0; j <10; j++)
          {
             
-             if(mat[i][k]+mat[k][j]<mat[i][j])
+             if((mat[i][k]!=0 && mat[k][j]!=0 && mat[i][k]+mat[k][j]<mat[i][j])|| mat[i][j]==0)
              {
               mat[i][j]=mat[i][k]+mat[k][j];
              }
@@ -69,7 +58,11 @@ for(int i=0;i<10;i++)
  int havePath(int** mat,int length,int i,int j)
  {
     FWA(mat,length);
-      if (mat[i][j] != 0&&mat[i][j]<infinite)
+    if(i==j)
+    {
+      return 0;
+    }
+      if (mat[i][j] > 0)
     {
         return 1;
     }
@@ -78,8 +71,8 @@ for(int i=0;i<10;i++)
 
  int shortestPath(int** mat,int length,int i,int j)
  {
-   FWA(mat,length);
-    if(mat[i][j]!=0&&mat[i][j]<infinite)
+  
+    if(mat[i][j])
     {
       return mat[i][j];
     }
