@@ -44,8 +44,9 @@ int main()
 
  }
 
- while(choose != 'D');
+ while(choose != 'D'||choose != EOF);
  
   
 return 0;
 }
+
