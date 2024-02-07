@@ -5,8 +5,7 @@
 int main()
 {
  char choose;
- int i=0;
- int j=0;
+
  
  
 
@@ -25,6 +24,8 @@ int main()
   }
   case 'B':
   {
+    int i=0;
+    int j=0;
     scanf("%d%d",&i,&j);
     //char ans= havePath(mymat0,10,i,j);
     havePath(i,j);
@@ -34,9 +35,11 @@ int main()
   }
   case 'C':
   {
-    scanf("%d%d",&i,&j);
+    int m=0;
+    int l=0;
+    scanf("%d%d",&m,&l);
     //int value=shortestPath(mymat0,10,i,j);
-    printf("%d\n",shortestPath(i,j));
+    printf("%d\n",shortestPath(m,l));
     break; 
   }
  default:
@@ -52,4 +55,5 @@ int main()
   
 return 0;
 }
+
 
