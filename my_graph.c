@@ -9,16 +9,6 @@ int main()
  int j=0;
  
  
-    int mymat0[10][10];
- 
-
- for(int i=0;i<10;i++)
-    {
-     for(int j=0;j<10;j++)
-     {
-      mymat0[i][j]=0;
-     }
-    }
 
  
  
@@ -30,21 +20,23 @@ int main()
  {
   case 'A':
   {
-   initialize(mymat0,10);
+   initialize();
    break; 
   }
   case 'B':
   {
     scanf("%d%d",&i,&j);
     //char ans= havePath(mymat0,10,i,j);
-    printf("%s\n", havePath(mymat0,10,i,j)? "True":"False");
+    havePath(i,j);
+    printf("\n");
+   // printf("%s\n", havePath(mymat0,10,i,j)? "True":"False");
     break; 
   }
   case 'C':
   {
     scanf("%d%d",&i,&j);
     //int value=shortestPath(mymat0,10,i,j);
-    printf("%d\n",shortestPath(mymat0,10,i,j));
+    printf("%d\n",shortestPath(i,j));
     break; 
   }
  default:
@@ -60,3 +52,4 @@ int main()
   
 return 0;
 }
+
