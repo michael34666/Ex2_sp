@@ -75,15 +75,15 @@ void initialize()
    }
     if(i==j)
     {
-      printf("False");
+     // printf("False");
       return 0;
     }
       if (copymat[i][j] > 0)
     {
-      printf("True");
-      return 0;
+     //printf("True");
+      return 1;
     }
-    printf("False");
+    //printf("False");
     return 0;
  }
 
