@@ -4,6 +4,8 @@
 
 int main()
 {
+  int i=0;
+  int j=0;
  char choose;
 
  do{
@@ -15,33 +17,24 @@ int main()
   case 'A':
   {
    initialize();
-  
    break; 
   }
   case 'B':
   {
-    int i=0;
-    int j=0;
+    
     scanf("%d%d",&i,&j);
-    //char ans= havePath(mymat0,10,i,j);
-    //havePath(i,j);
-    //printf("\n");
     printf("%s\n", havePath(i,j)? "True":"False");
-    //printf("\n");
     break; 
   }
   case 'C':
   {
-    int m=0;
-    int l=0;
-    scanf("%d%d",&m,&l);
-    //int value=shortestPath(mymat0,10,i,j);
-    printf("%d\n",shortestPath(m,l));
-    //printf("\n");
+    
+    scanf("%d%d",&i,&j);
+    
+    printf("%d\n",shortestPath(i,j));
+    
     break; 
   }
-  case 'D':
-  break;
 
  default:
     break;
