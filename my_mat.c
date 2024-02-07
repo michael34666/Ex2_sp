@@ -67,12 +67,15 @@ void initialize(int** mat,int length)
    }
     if(i==j)
     {
+      printf("False");
       return 0;
     }
       if (copymat[i][j] > 0)
     {
-        return 1;
+      printf("True");
+      return 0;
     }
+    printf("False");
     return 0;
  }
 
@@ -82,7 +85,7 @@ void initialize(int** mat,int length)
    {
     FWA(mat,length);
    }
-   
+
     if(copymat[i][j])
     {
       return copymat[i][j];
