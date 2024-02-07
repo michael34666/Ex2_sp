@@ -21,10 +21,9 @@ void initialize()
     }
   
  }
- 
- void FWA()
-{ 
-   
+ void copy()
+ {
+
 
    for(int i=0;i<length;i++)
    {
@@ -34,6 +33,13 @@ void initialize()
 
       }
   }
+ }
+ 
+ void FWA()
+{ 
+   
+
+   
 
 
   for(int k=0;k<10;k++)
