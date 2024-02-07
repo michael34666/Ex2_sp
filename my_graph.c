@@ -15,7 +15,7 @@ int main()
   case 'A':
   {
    initialize();
-   printf("\n");
+  
    break; 
   }
   case 'B':
@@ -26,8 +26,8 @@ int main()
     //char ans= havePath(mymat0,10,i,j);
     //havePath(i,j);
     //printf("\n");
-    printf("%s", havePath(i,j)? "True":"False");
-    printf("\n");
+    printf("%s\n", havePath(i,j)? "True":"False");
+    //printf("\n");
     break; 
   }
   case 'C':
@@ -36,8 +36,8 @@ int main()
     int l=0;
     scanf("%d%d",&m,&l);
     //int value=shortestPath(mymat0,10,i,j);
-    printf("%d",shortestPath(m,l));
-    printf("\n");
+    printf("%d\n",shortestPath(m,l));
+    //printf("\n");
     break; 
   }
   case 'D':
