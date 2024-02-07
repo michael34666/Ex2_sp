@@ -37,10 +37,6 @@ void initialize()
  
  void FWA()
 { 
-   
-
-   
-
 
   for(int k=0;k<10;k++)
    {
@@ -100,4 +96,3 @@ void initialize()
     }
 
     return -1;
- }
