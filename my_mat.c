@@ -16,24 +16,12 @@ void initialize()
      for(int j=0;j<length;j++)
      {
       scanf("%d",&mymat0[i][j]);
-    
+      copymat[i][j]=mymat0[i][j];
      }
     }
   
  }
- void copy()
- {
 
-
-   for(int i=0;i<length;i++)
-   {
-      for(int j=0;j<length;j++)
-      {
-         copymat[i][j]=mymat0[i][j];
-
-      }
-  }
- }
  
  void FWA()
 { 
