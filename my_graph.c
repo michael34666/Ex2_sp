@@ -6,11 +6,6 @@ int main()
 {
  char choose;
 
- 
- 
-
- 
- 
  do{
 
  scanf("%c",&choose);
@@ -29,9 +24,10 @@ int main()
     int j=0;
     scanf("%d%d",&i,&j);
     //char ans= havePath(mymat0,10,i,j);
-    havePath(i,j);
+    //havePath(i,j);
+    //printf("\n");
+    printf("%s", havePath(i,j)? "True":"False");
     printf("\n");
-   // printf("%s\n", havePath(mymat0,10,i,j)? "True":"False");
     break; 
   }
   case 'C':
@@ -44,6 +40,9 @@ int main()
     printf("\n");
     break; 
   }
+  case 'D':
+  break;
+
  default:
     break;
   
@@ -57,4 +56,3 @@ int main()
   
 return 0;
 }
-
