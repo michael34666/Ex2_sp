@@ -7,11 +7,10 @@ int main()
  char choose;
  int i=0;
  int j=0;
- int **mymat0=(int**)malloc(10*sizeof(int*));
- for(int i=0;i<10;i++)
- {
-    mymat0[i]=(int *)malloc(10*sizeof(int));
- }
+ 
+ 
+    int mymat0[10][10];
+ 
 
  for(int i=0;i<10;i++)
     {
@@ -56,12 +55,8 @@ int main()
 
  }
 
- while(choose != 'D'&&choose != EOF);
+ while(choose != 'D'||choose != EOF);
  
-   for (int i = 0; i < 10; ++i)
-        free(mymat0[i]);
-
-    free(mymat0);
-
+  
 return 0;
 }
