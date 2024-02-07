@@ -20,6 +20,7 @@ int main()
   case 'A':
   {
    initialize();
+   printf("\n");
    break; 
   }
   case 'B':
@@ -39,7 +40,8 @@ int main()
     int l=0;
     scanf("%d%d",&m,&l);
     //int value=shortestPath(mymat0,10,i,j);
-    printf("%d\n",shortestPath(m,l));
+    printf("%d",shortestPath(m,l));
+    printf("\n");
     break; 
   }
  default:
@@ -55,5 +57,4 @@ int main()
   
 return 0;
 }
-
 
