@@ -5,7 +5,7 @@
 
 
 
-int fwarun=0;
+static int fwarun=0;
 int mymat0[10][10];
 int  copymat [10][10] ;
  
