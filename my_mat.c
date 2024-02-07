@@ -62,25 +62,27 @@ void initialize()
      // printf("False");
       return 0;
     }
-      if (copymat[i][j] > 0)
+   else if (copymat[i][j] > 0)
     {
      //printf("True");
       return 1;
     }
+    else{
     //printf("False");
     return 0;
+    }
  }
 
- int shortestPath(int i,int j)
+ int shortestPath(int m,int l)
  {
   if(fwarun!=1)
    {
     FWA();
    }
 
-    if(copymat[i][j])
+    if(copymat[m][l])
     {
-      return copymat[i][j];
+      return copymat[m][l];
     }
 
     return -1;
