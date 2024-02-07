@@ -1,88 +1,62 @@
 #include <stdio.h>
-#include <stdbool.h>
-#include <math.h>
+#include <stdlib.h>
+#include "my_mat.h"
 
-
-
-//int fwarun=0;
+int main()
+{
+ char choose;
+ int i=0;
+ int j=0;
  
-void initialize(int** mat,int length)
- {
-    for(int i=0;i<length;i++)
+ 
+    int mymat0[10][10];
+ 
+
+ for(int i=0;i<10;i++)
     {
-     for(int j=0;j<length;j++)
+     for(int j=0;j<10;j++)
      {
-      scanf("%d",&mat[i][j]);
-    
+      mymat0[i][j]=0;
      }
     }
-  
- }
+
  
- void FWA(int** mat,int length)
-{ 
-   //int  copymat [length][length] ;
+ 
+ do{
 
-   //for(int i=0;i<length;i++)
-   //{
-   //   for(int j=0;j<length;j++)
-    //  {
-     //    copymat[i][j]=mat[i][j];
+ scanf("%c",&choose);
 
-    //  }
-  // }
+ switch (choose)
+ {
+  case 'A':
+  {
+   initialize(mymat0,10);
+   break; 
+  }
+  case 'B':
+  {
+    scanf("%d%d",&i,&j);
+    //char ans= havePath(mymat0,10,i,j);
+    printf("%s\n", havePath(mymat0,10,i,j)? "True":"False");
+    break; 
+  }
+  case 'C':
+  {
+    scanf("%d%d",&i,&j);
+    //int value=shortestPath(mymat0,10,i,j);
+    printf("%d\n",shortestPath(mymat0,10,i,j));
+    break; 
+  }
+ default:
+    break;
+  
 
+ }
 
-  for(int k=0;k<10;k++)
-   {
-      for(int i=0;i<10;i++)
-      {
-         for (int j= 0; j <10; j++)
-         {
-            
-             if((mat[i][k]!=0 && mat[k][j]!=0 && mat[i][k]+mat[k][j]<mat[i][j])|| mat[i][j]==0)
-             {
-               if(i!=j)
-               {
-              mat[i][j]=mat[i][k]+mat[k][j];
-               }
-             }
-            
-         }
-         
-      }
-   }
-   
-   //fwarun=1;
+ }
 
+ while(choose != 'D'&&choose != EOF);
+ 
+  
+return 0;
 }
- 
- 
- int havePath(int** mat,int length,int i,int j)
- {
-   
-    FWA(mat,length);
-   
-    if(i==j)
-    {
-      return 0;
-    }
-      if (mat[i][j] > 0)
-    {
-        return 1;
-    }
-    return 0;
- }
-
- int shortestPath(int** mat,int length,int i,int j)
- {
-  
-    FWA(mat,length);
-   
-    if(mat[i][j])
-    {
-      return mat[i][j];
-    }
-
-    return -1;
- }
