@@ -1,26 +1,28 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
+#define length 10
 
 
 
 int fwarun=0;
+int mymat0[10][10];
 int  copymat [10][10] ;
  
-void initialize(int** mat,int length)
+void initialize()
  {
     for(int i=0;i<length;i++)
     {
      for(int j=0;j<length;j++)
      {
-      scanf("%d",&mat[i][j]);
+      scanf("%d",&mymat0[i][j]);
     
      }
     }
   
  }
  
- void FWA(int** mat,int length)
+ void FWA()
 { 
    
 
@@ -28,7 +30,7 @@ void initialize(int** mat,int length)
    {
       for(int j=0;j<length;j++)
       {
-         copymat[i][j]=mat[i][j];
+         copymat[i][j]=mymat0[i][j];
 
       }
   }
@@ -59,11 +61,11 @@ void initialize(int** mat,int length)
 }
  
  
- int havePath(int** mat,int length,int i,int j)
+ int havePath(int i,int j)
  {
    if(fwarun!=1)
    {
-    FWA(mat,length);
+    FWA();
    }
     if(i==j)
     {
@@ -79,11 +81,11 @@ void initialize(int** mat,int length)
     return 0;
  }
 
- int shortestPath(int** mat,int length,int i,int j)
+ int shortestPath(int i,int j)
  {
   if(fwarun!=1)
    {
-    FWA(mat,length);
+    FWA();
    }
 
     if(copymat[i][j])
