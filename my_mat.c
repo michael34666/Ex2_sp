@@ -10,7 +10,7 @@ int mymat0[10][10];
 int  copymat [10][10] ;
  
 void initialize()
- {
+ {  fwarun=0;
     for(int i=0;i<length;i++)
     {
      for(int j=0;j<length;j++)
@@ -33,11 +33,11 @@ void initialize()
          for (int j= 0; j <10; j++)
          {
             
-             if((copymat[i][k]!=0 && copymat[k][j]!=0 && copymat[i][k]+copymat[k][j]<copymat[i][j])|| copymat[i][j]==0)
+             if(copymat[i][k]!=0 && copymat[k][j]!=0 && (copymat[i][k]+copymat[k][j]<copymat[i][j] || copymat[i][j]==0))
              {
                if(i!=j)
                {
-              copymat[i][j]=copymat[i][k]+copymat[k][j];
+                copymat[i][j]=copymat[i][k]+copymat[k][j];
                }
              }
             
