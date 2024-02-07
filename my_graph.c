@@ -55,7 +55,7 @@ int main()
 
  }
 
- while(choose != 'D'||choose != EOF);
+ while(choose != 'D');
  
   
 return 0;
