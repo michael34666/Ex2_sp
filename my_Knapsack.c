@@ -4,6 +4,7 @@
 #define size 5
 char items[size];
 int knapSack(int[], int[], int[]);
+int max(int,int);
 int main()
 {
     //char items[size];
@@ -19,7 +20,7 @@ int main()
         selected_bool[i]=0;
     }
     knapSack(weights,value,selected_bool);
-  return 0;
+    return 0;
 }
 int max(int a,int b)
 {
@@ -33,8 +34,8 @@ int max(int a,int b)
 
  int knapSack (int weights[], int values[], int selected_bool[])
   {
-    int mat[size+1][21];
-    for(int i=0;i<=size;i++){
+    int mat[size][21];
+    for(int i=0;i<size;i++){
          for(int j=0;j<=W;j++){
             if(i==0 || j==0){
                mat[i][j]=0  ;
@@ -58,7 +59,7 @@ int max(int a,int b)
         j--;
     }
 
-    printf("Maximun profit: %d", mat[size][W]);
+    printf("Maximun profit: %d\n", mat[size][W]);
      printf("Selected items:"); 
     for(int i=0;i<=size;i++){
     if(selected_bool[i]==1)
