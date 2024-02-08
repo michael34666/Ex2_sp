@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdbool.h>
 #include <math.h>
 #define length 10
 
@@ -59,16 +58,16 @@ void initialize()
    }
     if(i==j)
     {
-     // printf("False");
+     
       return 0;
     }
    else if (copymat[i][j] > 0)
     {
-     //printf("True");
+     
       return 1;
     }
     else{
-    //printf("False");
+    
     return 0;
     }
  }
