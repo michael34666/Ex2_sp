@@ -13,7 +13,10 @@ libmat.a:my_mat.o
 my_mat.o:my_mat.c my_mat.h
 	gcc -Wall -g -c my_mat.c -o my_mat.o
 
-my_Knapsack:my_Knapsack.c 
+my_Knapsack:my_Knapsack.o
+	gcc -Wall -g -o my_Knapsack my_Knapsack.o
+
+my_Knapsack.o:my_Knapsack.c
 	gcc -Wall -g -c my_Knapsack.c -o my_Knapsack.o
 
 clean:
