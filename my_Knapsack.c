@@ -65,10 +65,10 @@ int max(int a,int b)
     if(selected_bool[i]==1)
     {
         printf(" %c",items[i]);
+
     }
     }
+    printf("\n");
    
   return 0;
   }
-
-    
