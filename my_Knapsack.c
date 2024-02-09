@@ -68,7 +68,9 @@ int max(int a,int b)
 
     }
     }
-    printf("\n");
+    
    
   return 0;
   }
+
+    
