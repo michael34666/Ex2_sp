@@ -3,20 +3,19 @@
 #define W 20
 #define size 5
 char items[size];
+
 int knapSack(int[], int[], int[]);
 int max(int,int);
 int main()
-{
-    //char items[size];
+{ 
     int value[size];
     int weights[size];
     int selected_bool[size];
-
     for(int i=0;i<size;i++)
     {
-        scanf("%c",&items[i]);
-        scanf("%d", &weights[i]);
-        scanf("%d", &value[i]);
+        scanf("%s",&items[i]);
+        scanf("%d",&value[i]);
+        scanf("%d",&weights[i]);
         selected_bool[i]=0;
     }
     knapSack(weights,value,selected_bool);
@@ -34,11 +33,11 @@ int max(int a,int b)
 
  int knapSack (int weights[], int values[], int selected_bool[])
   {
-    int mat[size][21];
-    for(int i=0;i<size;i++){
+    int mat[size+1][W+1];
+    for(int i=0;i<=size;i++){
          for(int j=0;j<=W;j++){
-            if(i==0 || j==0){
-               mat[i][j]=0  ;
+            if(i==0|| j==0){
+               mat[i][j]=0;
             }
             else if(weights[i-1]<=j){
                 mat[i][j]=max(values[i-1]+mat[i-1][j-weights[i-1]],mat[i-1][j]);
@@ -61,12 +60,15 @@ int max(int a,int b)
 
     printf("Maximun profit: %d\n", mat[size][W]);
      printf("Selected items:"); 
-    for(int i=0;i<=size;i++){
+    for(int i=0;i<size;i++)
+    {
     if(selected_bool[i]==1)
+    {
         printf(" %c",items[i]);
     }
+    }
+   
   return 0;
   }
 
     
-
