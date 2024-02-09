@@ -2,9 +2,8 @@
 #include <stdio.h>
 #define W 20
 #define size 5
-#include <string.h>
 char items[size];
-int mat[size+1][W+1];
+
 int knapSack(int[], int[], int[]);
 int max(int,int);
 int main()
@@ -14,22 +13,12 @@ int main()
     int selected_bool[size];
     for(int i=0;i<size;i++)
     {
-        scanf("%s %d %d",&items[i], &value[i], &weights[i]);
-       
+        scanf("%s",&items[i]);
+        scanf("%d",&value[i]);
+        scanf("%d",&weights[i]);
         selected_bool[i]=0;
     }
     knapSack(weights,value,selected_bool);
-     printf("Maximun profit: %d", mat[size][W]);
-     printf("\nSelected items:"); 
-    for(int i=0;i<size;i++)
-    {
-    if(selected_bool[i]==1)
-    {   
-         printf(" %c", items[i]);
-        
-    }
-    
-    }
     return 0;
 }
 int max(int a,int b)
@@ -44,7 +33,7 @@ int max(int a,int b)
 
  int knapSack (int weights[], int values[], int selected_bool[])
   {
-    
+    int mat[size+1][W+1];
     for(int i=0;i<=size;i++){
          for(int j=0;j<=W;j++){
             if(i==0|| j==0){
@@ -68,6 +57,20 @@ int max(int a,int b)
         }
         j--;
     }
+
+    printf("Maximum profit: %d\n", mat[size][W]);
+     printf("Selected items:"); 
+    for(int i=0;i<size;i++)
+    {
+    if(selected_bool[i]==1)
+    {   
+         printf(" %c", items[i]);
+         
+
+    }
+    
+    }
+    
    
   return 0;
   }
